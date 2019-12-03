@@ -73,7 +73,7 @@
             this.nanoNavigationButton2.Name = "nanoNavigationButton2";
             this.nanoNavigationButton2.Size = new System.Drawing.Size(208, 45);
             this.nanoNavigationButton2.TabIndex = 3;
-            this.nanoNavigationButton2.Text = "NanoButton";
+            this.nanoNavigationButton2.Text = "NanoButton1";
             // 
             // nanoNavigationButton3
             // 
@@ -88,7 +88,7 @@
             this.nanoNavigationButton3.Name = "nanoNavigationButton3";
             this.nanoNavigationButton3.Size = new System.Drawing.Size(208, 45);
             this.nanoNavigationButton3.TabIndex = 5;
-            this.nanoNavigationButton3.Text = "NanoButton";
+            this.nanoNavigationButton3.Text = "NanoButton3";
             // 
             // nanoNavigationButton4
             // 
@@ -103,7 +103,7 @@
             this.nanoNavigationButton4.Name = "nanoNavigationButton4";
             this.nanoNavigationButton4.Size = new System.Drawing.Size(208, 45);
             this.nanoNavigationButton4.TabIndex = 4;
-            this.nanoNavigationButton4.Text = "NanoButton";
+            this.nanoNavigationButton4.Text = "NanoButton2";
             // 
             // panel3
             // 
