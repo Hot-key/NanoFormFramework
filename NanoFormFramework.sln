@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.87
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NanoFormFramework", "NanoFormFramework\NanoFormFramework.csproj", "{C176801D-C777-49F5-A9D5-623DBB6665E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForm", "TestForm\TestForm.csproj", "{59B377E7-5402-4181-BEC5-EBB392F02892}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C176801D-C777-49F5-A9D5-623DBB6665E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C176801D-C777-49F5-A9D5-623DBB6665E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C176801D-C777-49F5-A9D5-623DBB6665E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C176801D-C777-49F5-A9D5-623DBB6665E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B377E7-5402-4181-BEC5-EBB392F02892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B377E7-5402-4181-BEC5-EBB392F02892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B377E7-5402-4181-BEC5-EBB392F02892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B377E7-5402-4181-BEC5-EBB392F02892}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18720DF5-D0A4-4AB5-8081-73F13B53BE96}
+	EndGlobalSection
+EndGlobal
