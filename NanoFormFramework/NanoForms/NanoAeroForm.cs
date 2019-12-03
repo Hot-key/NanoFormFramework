@@ -36,7 +36,7 @@ namespace NanoFormFramework.NanoForms
             base.OnLoad(e);
         }
 
-        private void DrawForm(object pSender, EventArgs pE)
+        private void DrawForm(object sender, EventArgs e)
         {
             using (Bitmap backImage = new Bitmap(this.Width, this.Height))
             {

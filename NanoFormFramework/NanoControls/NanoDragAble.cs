@@ -18,8 +18,6 @@ namespace NanoFormFramework.NanoControls
 
         private bool isFastDrag;
 
-        private NanoDrawAbleForm FastDragForm = new NanoDrawAbleForm();
-
         [Category("기타")]
         [Description("NanoAeroForm에서 Aero 효과를 비활성화 하여 빠른 드래그를 활성화 합니다")]
         [DefaultValue(false)]
