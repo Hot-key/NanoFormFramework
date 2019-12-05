@@ -44,6 +44,9 @@ namespace NanoFormFramework.NanoForms
                 {
                     Rectangle rectangle = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
                     graphics.FillRectangle(backColorBrush, rectangle);
+                    // on paint 는 컨트롤 그리기 전 처리
+
+                    OnPaint(new PaintEventArgs(graphics,rectangle));
 
                     foreach (Control ctrl in this.Controls)
                     {

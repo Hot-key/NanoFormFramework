@@ -110,11 +110,11 @@ namespace NanoFormFramework.NanoForms
             {
                 using (Graphics graphics = Graphics.FromImage(backImage))
                 {
-                    Rectangle gradientRectangle = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
+                    Rectangle rectangle = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
                     Brush b;
                     if (isGradient)
                     {
-                        b = new LinearGradientBrush(gradientRectangle, startColor, endColor, angle);
+                        b = new LinearGradientBrush(rectangle, startColor, endColor, angle);
                     }
                     else
                     {
@@ -123,7 +123,11 @@ namespace NanoFormFramework.NanoForms
 
                     graphics.SmoothingMode = SmoothingMode.HighQuality;
 
-                    RoundedRectangle.FillRoundedRectangle(graphics, b, gradientRectangle, cornerRadius);
+                    RoundedRectangle.FillRoundedRectangle(graphics, b, rectangle, cornerRadius);
+
+                    // on paint 는 컨트롤 그리기 전 처리
+
+                    OnPaint(new PaintEventArgs(graphics, rectangle));
 
                     foreach (Control ctrl in this.Controls)
                     {

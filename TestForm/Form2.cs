@@ -22,5 +22,12 @@ namespace TestForm
         {
             this.BackColor = Color.FromArgb(50, 25, 25, 25);
         }
+
+        private void Form2_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+
+            g.FillRectangle(Brushes.Brown, 20, 50, 200, 300);
+        }
     }
 }
