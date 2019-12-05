@@ -20,14 +20,7 @@ namespace TestForm
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            this.BackColor = Color.FromArgb(50, 25, 25, 25);
-        }
-
-        private void Form2_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
-
-            g.FillRectangle(Brushes.Brown, 20, 50, 200, 300);
+            this.BackColor = Color.FromArgb(150, 25, 25, 25);
         }
     }
 }

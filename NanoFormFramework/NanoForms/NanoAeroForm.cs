@@ -16,7 +16,6 @@ namespace NanoFormFramework.NanoForms
         public new Color BackColor;
 
         private Timer drawTimer = new Timer();
-        private Brush backColorBrush;
         public NanoAeroForm()
         {
             this.FormBorderStyle = FormBorderStyle.None;
@@ -25,7 +24,6 @@ namespace NanoFormFramework.NanoForms
 
         protected override void OnLoad(EventArgs e)
         {
-            backColorBrush = new SolidBrush(this.BackColor);
             if (!DesignMode)
             {
                 drawTimer.Interval = 1000 / 60;
@@ -43,10 +41,13 @@ namespace NanoFormFramework.NanoForms
                 using (Graphics graphics = Graphics.FromImage(backImage))
                 {
                     Rectangle rectangle = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
-                    graphics.FillRectangle(backColorBrush, rectangle);
+                    using (Brush backColorBrush = new SolidBrush(this.BackColor))
+                    {
+                        graphics.FillRectangle(backColorBrush, rectangle);
+                    }
                     // on paint 는 컨트롤 그리기 전 처리
 
-                    OnPaint(new PaintEventArgs(graphics,rectangle));
+                    //OnPaint(new PaintEventArgs(graphics,rectangle));
 
                     foreach (Control ctrl in this.Controls)
                     {
@@ -66,7 +67,6 @@ namespace NanoFormFramework.NanoForms
         {
             drawTimer.Stop();
             drawTimer.Dispose();
-            backColorBrush.Dispose();
             base.Dispose(disposing);
         }
 

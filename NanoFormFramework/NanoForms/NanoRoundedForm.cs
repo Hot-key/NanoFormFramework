@@ -25,8 +25,6 @@ namespace NanoFormFramework.NanoForms
         private float angle;
         private int cornerRadius;
 
-        private Brush backColorBrush;
-
         [Category("Gradient")]
         [Description("Paintin form use the gradient color")]
         [DefaultValue(false)]
@@ -94,7 +92,6 @@ namespace NanoFormFramework.NanoForms
 
         protected override void OnLoad(EventArgs e)
         {
-            backColorBrush = new SolidBrush(this.BackColor);
             if (!DesignMode)
             {
                 drawTimer.Interval = 1000 / 60;
@@ -160,7 +157,6 @@ namespace NanoFormFramework.NanoForms
                 Graphics graphics = e.Graphics;
                 Rectangle gradientRectangle = new Rectangle(0, 0, this.Width - 1, this.Height - 1);
                 Brush b;
-                Brush b1 = new SolidBrush(Color.White);
                 if (isGradient)
                 {
                     b = new LinearGradientBrush(gradientRectangle, startColor, endColor, angle);
@@ -171,9 +167,9 @@ namespace NanoFormFramework.NanoForms
                 }
 
                 graphics.SmoothingMode = SmoothingMode.HighQuality;
-                graphics.FillRectangle(b1, gradientRectangle);
+                graphics.FillRectangle(b, gradientRectangle);
                 RoundedRectangle.FillRoundedRectangle(graphics, b, gradientRectangle, cornerRadius);
-                //MessageBox.Show(cornerRadius.ToString());
+
                 b.Dispose();
             }
 
